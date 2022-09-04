@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://ababil.mislbd.com/ws/api" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://ababil.mislbd.com/ws/api" />
+      <s:element name="doCTSTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFromAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sToAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCharges" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Narration" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromAccountType" type="s1:accountType" />
+            <s:element minOccurs="1" maxOccurs="1" name="toAccountType" type="s1:accountType" />
+            <s:element minOccurs="0" maxOccurs="1" name="referenceno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRequestId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doCTSTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doCTSTransactionResult" type="s1:transactionResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doCTSReverseTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFromAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sToAccount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAmount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRequestId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromAccountType" type="s1:accountType" />
+            <s:element minOccurs="1" maxOccurs="1" name="toAccountType" type="s1:accountType" />
+            <s:element minOccurs="0" maxOccurs="1" name="referenceno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doCTSReverseTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doCTSReverseTransactionResult" type="s1:transactionResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="referenceno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sRequestId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountDetailResult" type="s1:AccountInformationResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ababil.mislbd.com/ws/api">
+      <s:simpleType name="accountType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Savings" />
+          <s:enumeration value="Checking" />
+          <s:enumeration value="Gl" />
+          <s:enumeration value="SubGL" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="transactionResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="errorDetail" type="s1:errorDetail" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="requestReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="responseReference" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="transactionStatus" type="s1:transactionStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="errorDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" form="unqualified" name="errorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="errorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="transactionStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="FAIL" />
+          <s:enumeration value="SUCCESS" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="AccountInformationResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:transactionResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="accountDetail" type="s1:AccountDetail" />
+              <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="signatures" nillable="true" type="s1:AccountSignature" />
+              <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="signatureInstruction" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AccountDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="accountBalance" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="accountName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="accountNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="accountStatus" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountSignature">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="signature" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="doCTSTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:doCTSTransaction" />
+  </wsdl:message>
+  <wsdl:message name="doCTSTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:doCTSTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="doCTSReverseTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:doCTSReverseTransaction" />
+  </wsdl:message>
+  <wsdl:message name="doCTSReverseTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:doCTSReverseTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SIBLATSSoap">
+    <wsdl:operation name="doCTSTransaction">
+      <wsdl:input message="tns:doCTSTransactionSoapIn" />
+      <wsdl:output message="tns:doCTSTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doCTSReverseTransaction">
+      <wsdl:input message="tns:doCTSReverseTransactionSoapIn" />
+      <wsdl:output message="tns:doCTSReverseTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetail">
+      <wsdl:input message="tns:GetAccountDetailSoapIn" />
+      <wsdl:output message="tns:GetAccountDetailSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SIBLATSSoap" type="tns:SIBLATSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doCTSTransaction">
+      <soap:operation soapAction="http://tempuri.org/doCTSTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCTSReverseTransaction">
+      <soap:operation soapAction="http://tempuri.org/doCTSReverseTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetail">
+      <soap:operation soapAction="http://tempuri.org/GetAccountDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SIBLATSSoap12" type="tns:SIBLATSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doCTSTransaction">
+      <soap12:operation soapAction="http://tempuri.org/doCTSTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCTSReverseTransaction">
+      <soap12:operation soapAction="http://tempuri.org/doCTSReverseTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SIBLATS">
+    <wsdl:port name="SIBLATSSoap" binding="tns:SIBLATSSoap">
+      <soap:address location="http://172.22.25.93/Delivery/SIBLATS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SIBLATSSoap12" binding="tns:SIBLATSSoap12">
+      <soap12:address location="http://172.22.25.93/Delivery/SIBLATS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\SIBLGlobalDA.dll
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\SIBLGlobalDA.pdb
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\Oracle.DataAccess.dll
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\SIBLCommon.dll
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\FluentValidation.dll
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\Newtonsoft.Json.dll
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\SIBLCommon.pdb
+F:\Work\mgapi\SIBLGlobalAPIDA\bin\Debug\FluentValidation.xml
+F:\Work\mgapi\SIBLGlobalAPIDA\obj\Debug\SIBLMGAPIDA.csprojResolveAssemblyReference.cache
+F:\Work\mgapi\SIBLGlobalAPIDA\obj\Debug\SIBLGlobalDA.dll
+F:\Work\mgapi\SIBLGlobalAPIDA\obj\Debug\SIBLGlobalDA.pdb

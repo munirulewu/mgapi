@@ -1,0 +1,16 @@
+F:\Work\mgapi\PushToITCL\bin\Debug\PushToITCL.exe.config
+F:\Work\mgapi\PushToITCL\bin\Debug\PushToITCL.exe
+F:\Work\mgapi\PushToITCL\bin\Debug\PushToITCL.pdb
+F:\Work\mgapi\PushToITCL\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\Work\mgapi\PushToITCL\bin\Debug\RestSharp.dll
+F:\Work\mgapi\PushToITCL\bin\Debug\SIBLCommon.dll
+F:\Work\mgapi\PushToITCL\bin\Debug\SIBLRemitDA.dll
+F:\Work\mgapi\PushToITCL\bin\Debug\FluentValidation.dll
+F:\Work\mgapi\PushToITCL\bin\Debug\Newtonsoft.Json.dll
+F:\Work\mgapi\PushToITCL\bin\Debug\SIBLCommon.pdb
+F:\Work\mgapi\PushToITCL\bin\Debug\RestSharp.xml
+F:\Work\mgapi\PushToITCL\bin\Debug\SIBLRemitDA.pdb
+F:\Work\mgapi\PushToITCL\bin\Debug\FluentValidation.xml
+F:\Work\mgapi\PushToITCL\obj\Debug\PushToITCL.csprojResolveAssemblyReference.cache
+F:\Work\mgapi\PushToITCL\obj\Debug\PushToITCL.exe
+F:\Work\mgapi\PushToITCL\obj\Debug\PushToITCL.pdb

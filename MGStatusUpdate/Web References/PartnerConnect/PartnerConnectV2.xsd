@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:pcs="http://moneygram.com/service/PartnerConnectService" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://moneygram.com/service/PartnerConnectService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="updateStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="status" type="pcs:MoneyTransferStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateStatusFault">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="errorCode" type="xs:string" />
+        <xs:element name="errorMessage" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="MoneyTransferStatus">
+    <xs:sequence>
+      <xs:element name="mgiTransactionID" type="xs:string" />
+      <xs:element name="partnerTransactionID" nillable="true" type="xs:string" />
+      <xs:element name="partnerReasonCode" type="xs:string" />
+      <xs:element name="partnerReasonMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

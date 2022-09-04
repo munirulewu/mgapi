@@ -1,0 +1,6 @@
+F:\Work\mgapi\SIBLCommon\bin\Debug\SIBLCommon.dll
+F:\Work\mgapi\SIBLCommon\bin\Debug\SIBLCommon.pdb
+F:\Work\mgapi\SIBLCommon\bin\Debug\FluentValidation.dll
+F:\Work\mgapi\SIBLCommon\bin\Debug\FluentValidation.xml
+F:\Work\mgapi\SIBLCommon\obj\Debug\SIBLCommon.dll
+F:\Work\mgapi\SIBLCommon\obj\Debug\SIBLCommon.pdb

@@ -1,0 +1,14 @@
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\MGStatusUpdate.exe.config
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\MGStatusUpdate.exe.manifest
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\MGStatusUpdate.application
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\MGStatusUpdate.exe
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\MGStatusUpdate.pdb
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\SIBLCommon.dll
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\FluentValidation.dll
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\SIBLCommon.pdb
+D:\work146\MGAPI\MGStatusUpdate\bin\Debug\FluentValidation.xml
+D:\work146\MGAPI\MGStatusUpdate\obj\Debug\MGStatusUpdate.exe.manifest
+D:\work146\MGAPI\MGStatusUpdate\obj\Debug\MGStatusUpdate.application
+D:\work146\MGAPI\MGStatusUpdate\obj\Debug\MGStatusUpdate.exe
+D:\work146\MGAPI\MGStatusUpdate\obj\Debug\MGStatusUpdate.pdb

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{75D73858-7D26-449F-93A3-B50AD37AD30D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIBLCommon</RootNamespace>
+    <AssemblyName>SIBLCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.8.6.1\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIBLCommon\Common\CConstants.cs" />
+    <Compile Include="SIBLCommon\Common\CAppSettingConstant.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Account\CAccInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Account\CAccList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\AllLookup\CAllLookup.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\AllLookup\CAllLookupList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Application\CAppConfig.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bank\CBank.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bank\CBankList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bank\CBranch.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bank\CBranchList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bases\ASIBLEntityBase.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bases\ASIBLEntityCollectionBase.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Bases\ISIBLEntityBase.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\BEFTN\CBEFTN.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\BEFTN\CBEFTNList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\BAVResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\BeneficiaryAccount.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CallBackRequest.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CCallBackResult.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CmiscellaneousData.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CPaymentInstrument.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CRecipientInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CRemitData.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CRemitTransfer.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CRequestValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CSenderInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CSystemInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\CTransactionInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\RemitCallBack.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\RemitStatusCallBackReq.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\RemitStatusReqValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\bKash\RemitTransferReqValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Caching\CCacheMapping.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Country\CCountry.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Country\CCountryList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CAbabilTransaction.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CAbabilTransactionResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CCheque.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CChequeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CDisbursementInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CDisbursementInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CPayment.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CPaymentList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CRecipientInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CRecipientInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CSenderInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CSenderInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CSupplementalInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CSupplementalInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CTransactionInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CTransactionInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CUnDisbursementInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\CPU\CUnDisbursementInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CAddress.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CAddressType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CAuthenticationInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CAuthenticationInformationList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSErrorDetail.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSErrorDetailList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSReversalRequest.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSReversalRequestList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSTransactionRequest.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSTransactionRequestList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSTransactionResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CCBSTransactionResponseList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CDeliveryRecipient.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CDeliveryRecipientList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CDisbursementType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CDisbursementTypeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CIdentityType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CIdentityTypeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CInstruction.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CInstructionList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CInstructionType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CInstructionTypeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CMapModeller.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CMoneyType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CMoneyTypeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CNameType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CNameTypeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CPersonType.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CPersonTypeList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CRecipientBankDetails.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CRecipientBankDetailsList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CSenderInformation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CTransactionUpdate.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CTransactionUpdateList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CUpdateResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Disbursement\CUpdateResponseList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\District\CDistrict.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\District\CDistrictList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\File\CFile.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\File\CFileList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\ITCL\CAccDeposit.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\ITCL\CAccDepositResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\ITCL\CToken.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\ITCL\CTokenResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CAdditionalDataList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CAdditionData.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CAmount.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CbKashTransValidation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CMgBkashSuccess.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CMGErrorResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CMGSuccessResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CReceiver.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CErrorResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CPerson.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CSender.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CATransaction.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CSuccessResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CTransaction.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CTransactionValidation.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\MGAPI\CbKashValidationRequest.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Permission\CPermission.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Permission\CPermissionList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CDAS.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CDASBankBranchValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CDASValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CResponseErrorList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CRemitInfoList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CRecipientInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CRemitInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CRemitInfoValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CResponseError.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CResponseDAS.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CResponseDetail.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CSenderInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CSystemInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CSystemInfoValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CTansDetailValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CTansStatusValidator.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CTransactionInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RemitGlobalAPI\CTransactionStatus.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Result\CResult.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RoleRermission\CRolePermission.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\RoleRermission\CRolePermissionList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Role\CRole.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Role\CRoleList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SGCL\CSGCL.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SGCL\CSGCLList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Shipping\CCheckFees.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Shipping\CShipping.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Shipping\CShippingList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SIBLRemitPay\CCashTransactionInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SIBLRemitPay\CCashTransactionInfoList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SIBLRemitPay\CRemiAccount.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SIBLRemitPay\CSIBLRemitPay.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SIBLRemitPay\CSIBLRemitPayList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\SIBLRemit\CAbabilTransaction.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CAccessToken.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CAddPayment.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CBillDetails.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CBillInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CBillInfoList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CCancel.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CNMCustomerInfo.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CPayment .cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CZone.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\Titas\CZoneList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\User\CUser.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\User\CUserList.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\WorldRemit\CAbabilTransaction.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\WorldRemit\CAbabilTransactionResponse.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\WorldRemit\CWRTransactionDetails.cs" />
+    <Compile Include="SIBLCommon\Common\Entity\WorldRemit\CWRTransactionDetailsList.cs" />
+    <Compile Include="SIBLCommon\Common\Service\Bases\AMBankingServiceBase.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Author\Author.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Author\ModifiedAuthor.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Caching\CCacheDataModel.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Caching\CCacheException.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Caching\CCacheManager.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Caching\CCacheUtil.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Caching\CWebCacheService.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Caching\ICacheBase.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CDatabase.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CDatabaseConfiguration.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CMethod.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CMethodParameter.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CRequest.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CRequestList.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CXMLConfigData.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CXMLDataHandler.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Configaration\CXMLDataManager.cs" />
+    <Compile Include="SIBLCommon\Common\Util\Logger\CLog.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

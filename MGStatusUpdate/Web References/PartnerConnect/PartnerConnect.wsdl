@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.moneygram.com/PartnerConnect" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://moneygram.com/service/PartnerConnectService" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="PartnerConnect" targetNamespace="http://moneygram.com/service/PartnerConnectService" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://moneygram.com/service/PartnerConnectService">
+      <xs:include schemaLocation="PartnerConnectV2.xsd" />
+    </xs:schema>
+  </types>
+  <message name="updateStatusRequest">
+    <part name="updateStatus" element="tns:updateStatus" />
+  </message>
+  <message name="updateStatusResponse">
+    <part name="updateStatusResponse" element="tns:updateStatusResponse" />
+  </message>
+  <message name="updateStatusFault">
+    <part name="parameters" element="tns:updateStatusFault" />
+  </message>
+  <portType name="PartnerConnect">
+    <operation name="updateStatus">
+      <input name="updateStatusRequest" message="tns:updateStatusRequest" />
+      <output name="updateStatusResponse" message="tns:updateStatusResponse" />
+      <fault name="updateStatusFault" message="tns:updateStatusFault" />
+    </operation>
+  </portType>
+  <binding name="PartnerConnectBinding" type="tns:PartnerConnect">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="updateStatus">
+      <soap:operation soapAction="urn:PartnerConnect#updateStatus" />
+      <input name="updateStatusRequest">
+        <soap:body use="literal" />
+      </input>
+      <output name="updateStatusResponse">
+        <soap:body use="literal" />
+      </output>
+      <fault name="updateStatusFault">
+        <soap:fault use="literal" name="updateStatusFault" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="PartnerConnectService">
+    <port name="PartnerConnect" binding="tns:PartnerConnectBinding">
+      <soap:address location="https://extadpartner.moneygram.com/Listenerservice/PartnerConnectStandard" />
+    </port>
+  </service>
+</definitions>

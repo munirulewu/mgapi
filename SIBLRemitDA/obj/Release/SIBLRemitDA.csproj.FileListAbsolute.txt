@@ -1,0 +1,11 @@
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\SIBLRemitDA.dll
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\SIBLRemitDA.pdb
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\Oracle.DataAccess.dll
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\SIBLCommon.dll
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\FluentValidation.dll
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\Newtonsoft.Json.dll
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\SIBLCommon.pdb
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\bin\Release\FluentValidation.xml
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\obj\Release\SIBLRemitDA.csprojResolveAssemblyReference.cache
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\obj\Release\SIBLRemitDA.dll
+E:\work46\SIBLRemitGlobalAPI\SIBLRemitGlobalAPI\SIBLRemitDA\obj\Release\SIBLRemitDA.pdb
